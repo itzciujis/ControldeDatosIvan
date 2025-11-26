@@ -1,1 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Crea un PIN de 4 dígitos: ");
+        String pin1 = sc.next();
+
+        if (pin1.length() != 4 || !pin1.matches("\\d{4}")) {
+            System.out.println("PIN no válido. Debe tener 4 números.");
+            return;
+        }
+
+        System.out.print("Repite el PIN para confirmarlo: ");
+        String pin2 = sc.next();
+
+        if (pin1.equals(pin2)) {
+            System.out.println("PIN correcto. Validado.");
+        } else {
+            System.out.println("Los PIN no coinciden.");
+        }
+    }
+}
+
 
